@@ -1,0 +1,44 @@
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",256col:Tc"
+
+# set the default TERM
+if-shell 'infocmp $TERM' { set default-terminal "$TERM" } { set default-terminal tmux-256color }
+
+# Enable RGB (truecolor)
+set -a terminal-features '*:RGB'
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'nordtheme/tmux'
+set -g @plugin 'catpuccin/tmux'
+set -g @plugin 'jimeh/tmux-themepack'
+set -g @plugin 'egel/tmux-gruvbox'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+
+set -g @themepack 'powerline/default/cyan'
+
+
+#Tmux Gruvbox Theme
+
+#set -g @tmux-gruvbox 'dark' # or 'light'
+
+# Catpuccin theme configurations 
+
+# set -g @catpuccin_flavour 'latte' #'mocha' is default 
+#set -g @catppuccin_powerline_icons_theme_enabled on
+#set -g @catppuccin_l_left_separator ""
+#set -g @catppuccin_l_right_separator ""
+#set -g @catppuccin_r_left_separator ""
+#set -g @catppuccin_r_right_separator ""
+
+
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
+
+
+
+run '~/.tmux/plugins/tpm/tpm'
+
