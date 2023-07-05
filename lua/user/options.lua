@@ -2,7 +2,11 @@
 -- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
+
 lvim.colorscheme = "gruvbox"
+vim.opt.background = "light"
+-- vim.g.gruvbox_material_foreground = "original"
+-- vim.g.gruvbox_material_background = "soft"
 lvim.format_on_save.enabled = true
 vim.opt.shiftwidth = 2        -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2           -- insert 2 spaces for a tab
@@ -19,6 +23,11 @@ lvim.plugins = {
       "VimBeGood",
     },
   },
+  { "dense-analysis/ale" },
+  { "arcticicestudio/nord-vim" },
+  { "prettier/vim-prettier" },
+  { "rafamadriz/neon" },
+  { "rebelot/kanagawa.nvim" },
   { "ellisonleao/gruvbox.nvim", priority = 1000 },
   { "sainnhe/sonokai" },
   { "tanvirtin/monokai.nvim" },
